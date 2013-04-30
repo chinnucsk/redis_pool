@@ -1,0 +1,25 @@
+{application, redis_pool,
+ [
+  {description, "Redis connection pool based on poolboy"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { redis_pool, []}},
+  {env, [
+         {pools,
+          [
+           {pool_master,
+            [
+             {size, 10},
+             {max_overflow, 20}
+            ],
+            [
+             {host, "localhost"},
+             {port, 16379}
+            ]}
+          ]}
+        ]}
+ ]}.
