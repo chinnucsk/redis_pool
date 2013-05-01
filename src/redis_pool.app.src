@@ -7,7 +7,7 @@
                   kernel,
                   stdlib
                  ]},
-  {mod, { redis_pool, []}},
+  {mod, { redis_pool_app, []}},
   {env, [
          {pools,
           [
